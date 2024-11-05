@@ -16,24 +16,10 @@ public class Album extends Media
     }
     
     //string to string
-    public String toString() {
-        //storing the result with the title and traackks
-        //calling super string from Media
-      String result = super.toString() + "\ntracks = " ;
-      
-      //for loop to go through the tracks
-      for ( int i = 0; i < tracks.length; i++)
-        {
-         //adds current track to the result 
-        result += tracks[i];
-
-        //loops through length to add a space between traacks
-        if ( i < tracks.length - 1) {
-            //adds whitespace
-            result += " ";
-        }
-
-        }
+    public String toString()
+    {
+        return super.toString() + "\ntracks = "+String.join(" ", tracks);
+    }
 
         
         return result;
